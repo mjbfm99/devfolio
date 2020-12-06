@@ -1,27 +1,26 @@
 module.exports = {
   siteMetadata: {
     // Site URL for when it goes live
-    siteUrl: `https://elastic-meninsky-aa7c74.netlify.app/`,
+    siteUrl: `https://www.manueljimenez.eu.org`,
     // Your Name
-    name: 'Ryan Fitzgerald',
+    name: 'Manuel Jiménez',
     // Main Site Title
-    title: `Ryan Fitzgerald | Full-Stack Developer`,
+    title: `Manuel Jiménez`,
     // Description that goes under your name in main bio
     description: `Lorem ipsum dolor sit amet consectetur adipisicing elit, ipsum.`,
     // Optional: Twitter account handle
-    author: `@rfitzio`,
-    // Optional: Github account URL
-    github: `https://github.com/ryanfitzgerald`,
-    // Optional: LinkedIn account URL
     email: `mailto:manuel@jimenez.eu.org`,
+    // Optional: Github account URL
+    github: `https://github.com/mjbfm99`,
+    // Optional: LinkedIn account URL
     // Content of the About Me section
     about: `Lorem ipsum dolor sit amet consectetur adipisicing elit. Ducimus perferendis porro cumque ea error ab voluptatem. Temporibus adipisci exercitationem similique itaque quibusdam laudantium, qui molestiae quas, aut amet animi id.`,
     // Optional: List your projects, they must have `name` and `description`. `link` is optional.
     awards: [
       {
-        name: 'Devfolio',
+        name: 'HP Codewars 2017 Madrid',
         description:
-          'A zero-config and blazing fast personal site + blog built with GatsbyJs and TailwindCSS',
+          'Second place',
       },
     ],
     // Optional: List your experience, they must have `name` and `description`. `link` is optional.
@@ -103,12 +102,6 @@ module.exports = {
     `gatsby-plugin-sharp`,
     `gatsby-plugin-postcss`,
     `gatsby-plugin-feed`,
-    {
-      resolve: `gatsby-plugin-google-analytics`,
-      options: {
-        trackingId: `ADD YOUR TRACKING ID HERE`, // Optional Google Analytics
-      },
-    },
     {
       resolve: `gatsby-plugin-manifest`,
       options: {

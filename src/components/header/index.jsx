@@ -21,6 +21,7 @@ const Header = ({ metadata = {}, noBlog = false }) => {
   const twitter = get(metadata, 'author', false);
   const github = get(metadata, 'github', false);
   const linkedin = get(metadata, 'linkedin', false);
+  const email = get(metadata, 'email', false);
 
   return (
     <div className={classes.wrapper}>
@@ -42,6 +43,16 @@ const Header = ({ metadata = {}, noBlog = false }) => {
                 href={`https://twitter.com/${twitter}`}
               >
                 Twitter
+              </a>
+            </li>
+          )}
+          {true && (
+            <li className={classes.item}>
+              <a
+                className={classes.link}
+                href={`mailto:manuel@jimenez.eu.org`}
+              >
+                Email
               </a>
             </li>
           )}
