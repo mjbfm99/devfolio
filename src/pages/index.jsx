@@ -6,6 +6,7 @@ import Header from '../components/header';
 import Layout from '../components/layout';
 import SectionAbout from '../components/section-about';
 import SectionBlog from '../components/section-blog';
+import SectionEducation from '../components/section-education';
 import SectionExperience from '../components/section-experience';
 import SectionProjects from '../components/section-projects';
 import SectionSkills from '../components/section-skills';
@@ -17,6 +18,7 @@ const Index = ({ data }) => {
   const projects = get(data, 'site.siteMetadata.projects', false);
   const posts = data.allMarkdownRemark.edges;
   const experience = get(data, 'site.siteMetadata.experience', false);
+  const education = get(data, 'site.siteMetadata.education', false);
   const skills = get(data, 'site.siteMetadata.skills', false);
   const awards = get(data, 'site.siteMetadata.awards', false);
   const noBlog = !posts || !posts.length;
@@ -31,6 +33,9 @@ const Index = ({ data }) => {
       {!noBlog && <SectionBlog posts={posts} />}
       {experience && experience.length && (
         <SectionExperience experience={experience} />
+      )}
+      {education && education.length && (
+        <SectionEducation education={education} />
       )}
       {skills && skills.length && <SectionSkills skills={skills} />}
     </Layout>
@@ -49,6 +54,7 @@ export const pageQuery = graphql`
         about
         author
         github
+        email
         linkedin
         projects {
           name
@@ -59,6 +65,10 @@ export const pageQuery = graphql`
           name
           description
           link
+        }
+        education {
+          name
+          description
         }
         awards {
           name

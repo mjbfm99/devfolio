@@ -14,9 +14,9 @@ const NotFoundPage = () => (
     <SEO title="Not found" />
     <h1 className={classes.title}>404: Not Found</h1>
     <p>
-      You just hit a route that doesn't exist.{' '}
+      Page not found.{' '}
       <Link className={classes.link} to="/">
-        Return to safety
+        Return
       </Link>
       .
     </p>
